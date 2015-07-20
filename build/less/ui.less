@@ -85,20 +85,19 @@
 	}
 	.modal-body {
 		padding: 20px 50px 30px 50px;
-		
+		text-align:center;
+		color: #fff;
 	}
 	
 	.modal-content {
-		background: url(../img/bg-1.jpg) center center no-repeat;
-		box-shadow: 0px 6px 0px 0px rgba(0,0,0,.3);
+		background: #0c587f;
 	}
 	.modal-dialog {
-		width: 360px;
-		
+		width: 390px;
 	}
 	h2 {
 		font-size: 20px;
-		font-weight: 900;
+		font-weight: 700;
 		text-transform: uppercase;
 		margin: 15px 0 10px;
 	}
@@ -125,41 +124,30 @@
 			box-shadow: 0px 2px 5px 0px rgba(0,0,0,.3) inset;
 			border: 1px solid #eee;
 			&.user {
-				background: url(../img/user-1.png) #fff right 15px center no-repeat;
+				background: url(../img/user-3.png) #fff right 15px center no-repeat;
 			}
 			&.phone {
-				background: url(../img/phone-1.png) #fff right 18px center no-repeat;
+				background: url(../img/input-phone-2.png) #fff right 15px center no-repeat;
 			}
+		}
+	}
+	.product-name {
+		position: relative;
+		margin-top: 30px;
+		&:after {
+			content: '';
+			width: 30px;
+			height: 2px;
+			background: #ffd800;
+			position: absolute;
+			left: 50%;
+			margin-left: -15px;
+			top: -15px;
 		}
 	}
 	.btn-success {
 		width: 100%;
 		padding: 10px;
 		font-size: 16px;
-	}
-	&.polit {
-		.modal-content {
-			background: url(../img/bg-1.jpg) center center no-repeat;
-			background-size: cover;
-		}
-	}
-}
-.thx-modal{
-	.full-width {
-		max-width: 70px;
-		display: table;
-		margin: 30px auto;
-	}
-	button.close {
-		opacity: 1;
-		background: url(../img/close-2.png) center center no-repeat;
-	}
-	.modal-content {
-		background: url(../img/thx-1.png) center center no-repeat;
-		background-size: cover;
-		box-shadow: none;
-	}
-	h2,h3 {
-		color: #fff;
 	}
 }

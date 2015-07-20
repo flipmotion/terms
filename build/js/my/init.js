@@ -26,9 +26,21 @@ $(document).ready(function() {
 	});
 	
 	
-	
-	
-	
+	$('#call2').on('show.bs.modal', function (event) {
+		var button = $(event.relatedTarget); // Button that triggered the modal
+		var recipient = button.data('product'); // Extract info from data-* attributes
+		// If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+		// Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+		var modal = $(this);
+		modal.find('.product-name').text(recipient);
+	});
+	var form = $('[data-form="send"]');
+	form.ajaxForm(function() {
+		$('#call2').modal('hide');
+		$('#call').modal('hide');
+		$('#thx').modal('show');
+		$(form).resetForm();
+	});
 	
 	var form = $('[data-form="send"]');
 	$(form).validator().on('submit', function (e) {
@@ -51,15 +63,15 @@ $(document).ready(function() {
 	ymaps.ready(init);
 	function init () {
 		myMap = new ymaps.Map('map', {
-			center: [55.709884, 37.5402883],
+			center: [51.685317, 39.1942046],
 			zoom: 12,
 			controls: []
 		}),
 		myMap.behaviors
 			.disable(['rightMouseButtonMagnifier' , 'scrollZoom'])
-			myPlacemark = new ymaps.Placemark([55.675884, 37.5402883], {
+			myPlacemark = new ymaps.Placemark([51.655317, 39.1942046], {
 				hintContent: [
-				'Улица Вавилова'
+				'ул. Станкевича, 36, Воронеж'
 			].join(''),
 				balloonContentBody: [
 				''
